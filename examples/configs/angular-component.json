@@ -1,0 +1,15 @@
+{
+  title: 'Angular Component',
+  directory: 'Angular',
+  inputs: [{
+    title: 'Angular Component Name?:',
+    ref: 'name'
+  }, {
+    title: 'Component selector?:',
+    ref: 'selector'
+  }],
+  files: [{
+    name: '{pl8.name}.ts',
+    tpl: 'examples/templates/angular-component.ts'
+  }]
+}

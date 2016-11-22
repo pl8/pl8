@@ -1,0 +1,13 @@
+button.{pl8.buttonName} {
+  background-color: '{pl8.buttonBg}';
+  opacity: .8;
+}
+
+button.{pl8.buttonName}:hover {
+  opacity: .9;
+}
+
+button.{pl8.buttonName}:focus,
+button.{pl8.buttonName}:active {
+  opacity: 1;
+}

@@ -1,0 +1,21 @@
+{
+  title: 'React Component',
+  directory: 'React/{pl8.name}', // outputs files to React/ sub directory with name input value
+  inputs: [{
+    title: 'Component name?:', // user prompt message
+    ref: 'name' // replaces all {pl8.name} references with user input value
+  }],
+  files: [{
+    name: '{pl8.name}.js', // file name and extension
+    // tpl attribute imports local files as templates
+    tpl: 'examples/templates/react-component.jsx'
+  }, {
+    name: '{pl8.name}.css',
+    // content attribute uses string as content template
+    content: '.{pl8.name} {}'
+  }, {
+    name: '{pl8.name}__tests.js',
+    // git attribute used for github resource template
+    git: 'https://github.com/justinsisley/pl8/blob/master/examples/templates/react-e2e.js'
+  }]
+}

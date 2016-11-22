@@ -1,0 +1,15 @@
+{
+  title: 'Ruby controller',
+  directory: 'Ruby'
+  inputs: [{
+    title: 'Ruby controller file name?:',
+    ref: 'fileName'
+  }, {
+    title: 'Ruby controller name?:',
+    ref: 'ctrlName'
+  }],
+  files: [{
+    name: '{pl8.fileName}.rb',
+    tpl: 'examples/templates/ruby-controller.rb',
+  }]
+}

@@ -1,0 +1,15 @@
+{
+  title: 'Java Class',
+  directory: 'Java',
+  inputs: [{
+    title: 'File name?:',
+    ref: 'name'
+  }, {
+    title: 'Class name?:',
+    ref: 'class'
+  }],
+  files: [{
+    name: '{pl8.name}.java',
+    tpl: 'examples/templates/java-example.java'
+  }]
+}

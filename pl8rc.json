@@ -1,0 +1,28 @@
+{
+  title: 'PL8 Config Examples',
+  directory: 'examples/output', // outputs all files to this directory
+  choices: [
+    // strings example
+    'examples/configs/react-component.json',
+    'examples/configs/java-class.json',
+    'examples/configs/css-button.json',
+    'examples/configs/angular-component.json',
+
+    // object example
+    {
+      title: 'Ruby controller',
+      directory: 'Ruby',
+      inputs: [{
+        title: 'Ruby controller file name?:',
+        ref: 'fileName'
+      }, {
+        title: 'Ruby controller name?:',
+        ref: 'ctrlName'
+      }],
+      files: [{
+        name: '{pl8.fileName}.rb',
+        tpl: 'examples/templates/ruby-controller.rb'
+      }]
+    }
+  ]
+}

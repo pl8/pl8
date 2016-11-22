@@ -1,0 +1,52 @@
+{
+  "name": "pl8",
+  "version": "0.3.1",
+  "author": "Justin Sisley <justin@vera.com>",
+  "description": "The most flexible boilerplate generator in the universe",
+  "bin": {
+    "pl8": "./bin/main.js",
+    "plt": "./bin/main.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./lib/babel-entry.js debug",
+    "test": "",
+    "lint": "eslint ./lib/**",
+    "build": "./node_modules/babel-cli/bin/babel.js ./lib --out-dir ./bin; rm ./bin/babel-entry.js; echo '#!/usr/bin/env node' | cat - ./bin/main.js > ./bin/temp && mv ./bin/temp ./bin/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinsisley/pl8"
+  },
+  "homepage": "http://pl8.io",
+  "bugs": "https://github.com/justinsisley/pl8/issues",
+  "dependencies": {
+    "babel-register": "^6.18.0",
+    "colors": "^1.1.2",
+    "hanson": "^1.2.0",
+    "inquirer": "^0.11.4",
+    "mkdirp": "^0.5.1",
+    "request": "^2.70.0",
+    "simple-git": "^1.31.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^4.0.0",
+    "eslint-plugin-react": "^3.16.1"
+  },
+  "keywords": [
+    "javascript",
+    "ecmascript",
+    "boilerplate",
+    "scaffold",
+    "plate"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  }
+}

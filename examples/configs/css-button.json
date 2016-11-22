@@ -1,0 +1,15 @@
+{
+  title: 'CSS Button Styles',
+  directory: 'CSS',
+  inputs: [{
+    title: 'Button style name:',
+    ref: 'buttonName'
+  }, {
+    title: 'Button background color:',
+    ref: 'buttonBg'
+  }],
+  files: [{
+    name: '{pl8.buttonName}.css',
+    tpl: 'examples/templates/button.css'
+  }]
+}

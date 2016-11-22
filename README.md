@@ -1,4 +1,4 @@
-![pl8](http://i.imgur.com/TDfXqX0.png)
+![PL8](http://i.imgur.com/TDfXqX0.png)
 # PL8
 The most simple boilerplate generator in the universe.
 

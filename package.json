@@ -1,8 +1,8 @@
 {
-  "name": "pl8",
+  "name": "PL8",
   "version": "0.3.4",
   "author": "PL8 <pl8@pl8.io>",
-  "description": "The most flexible boilerplate generator in the universe",
+  "description": "The most simple boilerplate generator in the universe",
   "bin": {
     "pl8": "./bin/main.js",
     "plt": "./bin/main.js"

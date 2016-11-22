@@ -69,7 +69,9 @@ var inputs = function inputs(config) {
   // handle prompt response
   var response = function response(answer) {
     // save input value as pl8 variable
-    _index2.default.vars.setRef(input.ref, answer.input);
+    if (answer.input && answer.input.length > 0) {
+      _index2.default.vars.setRef(input.ref, answer.input);
+    }
 
     // update index to process next input (if it exists)
     currentIndex += 1;
@@ -152,8 +154,12 @@ var delegate = function delegate(config) {
   } else if (config.choices) {
     choices(config.choices);
   } else {
-    _index2.default.files.createStoreFiles(function () {
-      console.log('Success!'.white.underline, 'Files created'); // eslint-disable-line
+    _index2.default.files.createStoreFiles(function (names) {
+      console.log('\nSuccess!'.white.underline); // eslint-disable-line
+      names.forEach(function (name) {
+        return console.log('•', _index2.default.vars.replaceVarsInString(name));
+      });
+      console.log('');
     });
   }
 };

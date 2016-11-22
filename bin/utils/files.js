@@ -182,6 +182,7 @@ var createStoreFiles = function createStoreFiles(done) {
   var fileIndex = 0;
   var fileName = names[fileIndex];
   var fileContent = files[fileName];
+  var fileNames = [fileName];
 
   // move on to next file for creation
   var createNextFile = function createNextFile() {
@@ -190,6 +191,7 @@ var createStoreFiles = function createStoreFiles(done) {
     if (fileIndex !== names.length) {
       fileName = names[fileIndex];
       fileContent = files[fileName];
+      fileNames.push(fileName);
       createFile(dir + '/' + fileName, fileContent, createNextFile);
     } else {
       createNextDir(); //eslint-disable-line
@@ -208,13 +210,14 @@ var createStoreFiles = function createStoreFiles(done) {
         fileIndex = 0;
         fileName = names[fileIndex];
         fileContent = files[fileName];
+        fileNames.push(fileName);
         var path = _index2.default.vars.replaceVarsInString(dir + '/' + fileName);
         createDir(dir, function () {
           return createFile(path, fileContent, createNextFile);
         });
       })();
     } else {
-      done();
+      done(fileNames);
     }
   };
 

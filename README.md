@@ -32,12 +32,12 @@ Need to create some boilerplates? PL8 makes it easy!
 
 
 ## Documentation
-- [Title](#title)
-- [Directory](#directory)
-- [Vars](#vars)
-- [Inputs](#inputs)
-- [Files](#files)
-- [Choices](#choices)
+- [Title](#title-string)
+- [Directory](#directory-string)
+- [Vars](#vars-array)
+- [Inputs](#inputs-array)
+- [Files](#files-array)
+- [Choices](#choices-array)
 - [Example Config](#example-config)
 
 #### Title: `String`

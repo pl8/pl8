@@ -1,7 +1,7 @@
 {
   "name": "pl8",
-  "version": "0.3.1",
-  "author": "Justin Sisley <justin@vera.com>",
+  "version": "0.3.2",
+  "author": "PL8 <pl8@pl8.io>",
   "description": "The most flexible boilerplate generator in the universe",
   "bin": {
     "pl8": "./bin/main.js",
@@ -16,10 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/justinsisley/pl8"
+    "url": "https://github.com/pl8/pl8"
   },
   "homepage": "http://pl8.io",
-  "bugs": "https://github.com/justinsisley/pl8/issues",
+  "bugs": "https://github.com/pl8/pl8/issues",
   "dependencies": {
     "babel-register": "^6.18.0",
     "colors": "^1.1.2",

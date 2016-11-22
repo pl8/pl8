@@ -51,48 +51,101 @@ All paths and files correspond to the `examples/` directory.
 }
 ```
 
-#### react-component.json configuration
+
+## Documentation
+
+#### Title: `String`
+Title of PL8 configuration, acts as the initial prompt header.
 ``` js
 {
-  title: 'React Component',
-  directory: 'React/{pl8.name}', // outputs files to React/ sub directory with name input value
-  inputs: [{
-    title: 'Component name?:', // user prompt message
-    ref: 'name' // replaces all {pl8.name} references with user input value
-  }],
-  files: [{
-    name: '{pl8.name}.js', // file name and extension
-    // tpl attribute imports local files as templates
-    tpl: 'examples/templates/react-component.jsx'
-  }, {
-    name: '{pl8.name}.css',
-    // content attribute uses string as content template
-    content: '.{pl8.name} {}'
-  }, {
-    name: '{pl8.name}__tests.js',
-    // git attribute used for github resource template
-    git: 'https://github.com/justinsisley/pl8/blob/master/examples/templates/react-e2e.js'
+  title: 'Boilerplates:'
+}
+```
+
+#### Directory: `String`
+Output directory for new files.
+``` js
+{
+  directory: 'output/files'
+}
+```
+
+#### Vars: `Array`
+Static variables to replace in boilerplate templates for new files.
+``` js
+{
+  vars: [{
+    ref: 'name', // pl8 variable for replacement ... {pl8.name} = HelloWorld
+    content: 'HelloWorld',
+    // accepts tpl: 'path/to/tpl.ext' ... path to local template
+    // accepts git: 'github.resource.url' ... url to github resource as template
   }]
 }
 ```
 
+#### Inputs: `Array`
+Allow user to input custom variables for boilerplate templates.
+``` js
+{
+  inputs: [{
+    title: 'What is the component name?', // prompt message to show user
+    ref: 'component', // pl8 variable for replacement ... {pl8.component} = User input value
+  }]
+}
+```
 
-## Documentation
-
-#### Title:
-Title of PL8 configuration, acts as the initial prompt header.
-
-#### Directory:
-Output directory for new files.
-
-#### Vars:
-Static variable references to replace in boilerplate templates for new files.
-
-#### Inputs:
-Allow user to input custom variable content for boilerplate templates.
-
-#### Files:
+#### Files: `Array`
 Files to output from boilerplate templates.
+``` js
+{
+  files: [{
+    name: 'index.js', // creates index.js file
+    content: 'export default {}'
+  }, {
+    name: '{pl8.name}.js', // pl8 variables will be replaced in all file names and directory paths
+    tpl: 'templates/tpl.js', // accepts local template files
+  }, {
+    name: '{pl8.name}-e2e.js',
+    git: 'https://github.com/pl8/pl8/blob/master/examples/templates/react-e2e.js', // accepts github resource urls for templates
+  }]
+}
+```
 
-#### Choices:
+#### Choices: `Array`
 Allow users to choose between multiple boilerplate configurations.
+``` js
+// Object example
+{
+  choices: [{
+    title: 'Javascript Component',
+    vars: [{
+      ref: 'name', // pl8 variable for replacement ... {pl8.name} = HelloWorld
+      content: 'HelloWorld',
+      // accepts tpl: 'path/to/tpl.ext' ... path to local template
+      // accepts git: 'github.resource.url' ... url to github resource as template
+    }],
+    inputs: [{
+      title: 'What is the component name?', // prompt message to show user
+      ref: 'component', // pl8 variable for replacement ... {pl8.component} = User input value
+    }],
+    files: [{
+      name: 'index.js', // creates index.js file
+      content: 'export default {}'
+    }, {
+      name: '{pl8.name}.js', // pl8 variables will be replaced in all file names and directory paths
+      tpl: 'templates/tpl.js', // accepts local template files
+    }, {
+      name: '{pl8.name}-e2e.js',
+      git: 'https://github.com/pl8/pl8/blob/master/examples/templates/react-e2e.js', // accepts github resource urls for templates
+    }]
+  }]
+}
+
+// String example
+{
+  choices: [
+    'path/to/config.json',
+    'path/to/different/config.json',
+  ],
+}
+```

@@ -8,7 +8,7 @@ The most simple boilerplate generator in the universe.
 - [Installation](#installation)
 - [Demo](#demo)
 - [Documentation](#documentation)
-- [Example](#example)
+- [Example Config](#example-config)
 
 
 ## About
@@ -35,6 +35,7 @@ Need to create some boilerplates? PL8 makes it easy!
 
 #### Title: `String`
 Title of PL8 configuration, acts as the initial prompt header.
+
 ``` js
 {
   title: 'Boilerplates:'
@@ -43,6 +44,7 @@ Title of PL8 configuration, acts as the initial prompt header.
 
 #### Directory: `String`
 Output directory for new files.
+
 ``` js
 {
   directory: 'output/files'
@@ -51,6 +53,7 @@ Output directory for new files.
 
 #### Vars: `Array`
 Static variables to replace in boilerplate templates for new files.
+
 ``` js
 {
   vars: [{
@@ -64,6 +67,7 @@ Static variables to replace in boilerplate templates for new files.
 
 #### Inputs: `Array`
 Allow user to input custom variables for boilerplate templates.
+
 ``` js
 {
   inputs: [{
@@ -75,6 +79,7 @@ Allow user to input custom variables for boilerplate templates.
 
 #### Files: `Array`
 Files to output from boilerplate templates.
+
 ``` js
 {
   files: [{
@@ -92,6 +97,7 @@ Files to output from boilerplate templates.
 
 #### Choices: `Array`
 Allow users to choose between multiple boilerplate configurations.
+
 ``` js
 // Object example
 {
@@ -119,7 +125,9 @@ Allow users to choose between multiple boilerplate configurations.
     }]
   }]
 }
+```
 
+``` js
 // String example
 {
   choices: [
@@ -130,14 +138,14 @@ Allow users to choose between multiple boilerplate configurations.
 ```
 
 
-## Example
+## Example Config
 All paths and files correspond to the `examples/` directory.
 
 #### pl8rc.json config
 ``` js
 // Allow user to choose config option
 {
-  title: 'PL8 Boilerplate Example',
+  title: 'Boilerplates:',
   directory: 'output/files', // outputs all files to this directory
   choices: [
     // string example
@@ -169,7 +177,9 @@ All paths and files correspond to the `examples/` directory.
     }
   ]
 }
+```
 
+``` js
 // Or create some files right away
 {
   directory: 'output/files',

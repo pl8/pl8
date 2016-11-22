@@ -1,6 +1,6 @@
 {
   "name": "pl8",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "author": "PL8 <pl8@pl8.io>",
   "description": "The most flexible boilerplate generator in the universe",
   "bin": {

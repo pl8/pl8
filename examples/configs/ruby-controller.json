@@ -1,6 +1,6 @@
 {
   title: 'Ruby controller',
-  directory: 'Ruby'
+  directory: 'Ruby',
   inputs: [{
     title: 'Ruby controller file name?:',
     ref: 'fileName'

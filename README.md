@@ -7,7 +7,7 @@ The most simple boilerplate generator in the universe.
 - [About](#about)
 - [Installation](#installation)
 - [Demo](#demo)
-- [Examples](#examples)
+- [Example](#example)
 
 
 ## About
@@ -27,10 +27,10 @@ Need to create some boilerplates? PL8 makes it easy!
 
 
 ## Demo
-![Preview](http://g.recordit.co/H3t9EwsCGp.gif)
+![Preview](http://g.recordit.co/6QeNvdSQWo.gif)
 
 
-## Examples
+## Example
 All paths and files correspond to the `examples/` directory.
 
 ###### pl8rc.json config
@@ -45,23 +45,7 @@ All paths and files correspond to the `examples/` directory.
     'examples/configs/java-class.json',
     'examples/configs/css-button.json',
     'examples/configs/angular-component.json',
-
-    // config object example
-    {
-      title: 'Ruby controller',
-      directory: 'Ruby'
-      inputs: [{
-        title: 'Ruby controller file name?:',
-        ref: 'fileName'
-      }, {
-        title: 'Ruby controller name?:',
-        ref: 'ctrlName'
-      }],
-      files: [{
-        name: '{pl8.fileName}.rb',
-        tpl: 'examples/templates/ruby-controller.rb',
-      }]
-    }
+    'examples/configs/ruby-controller.json',
   ]
 }
 ```
@@ -87,63 +71,6 @@ All paths and files correspond to the `examples/` directory.
     name: '{pl8.name}__tests.js',
     // git attribute used for github resource template
     git: 'https://github.com/justinsisley/pl8/blob/master/examples/templates/react-e2e.js'
-  }]
-}
-```
-
-###### java-class.json configuration
-``` js
-{
-  title: 'Java Class',
-  directory: 'Java',
-  inputs: [{
-    title: 'File name?:',
-    ref: 'name'
-  }, {
-    title: 'Class name?:',
-    ref: 'class'
-  }],
-  files: [{
-    name: '{pl8.name}.java',
-    tpl: 'examples/templates/java-example.java'
-  }]
-}
-```
-
-###### css-button.json configuration
-``` js
-{
-  title: 'CSS Button Styles',
-  directory: 'CSS',
-  inputs: [{
-    title: 'Button style name:',
-    ref: 'buttonName'
-  }, {
-    title: 'Button background color:',
-    ref: 'buttonBg'
-  }],
-  files: [{
-    name: '{pl8.buttonName}.css',
-    tpl: 'examples/templates/button.css'
-  }]
-}
-```
-
-###### angular-component.json configuration
-``` js
-{
-  title: 'Angular Component',
-  directory: 'Angular',
-  inputs: [{
-    title: 'Angular Component Name?:',
-    ref: 'name',
-  }, {
-    title: 'Component selector?:',
-    ref: 'selector',
-  }],
-  files: [{
-    name: '{pl8.name}.ts',
-    tpl: 'examples/templates/angular-component.ts'
   }]
 }
 ```

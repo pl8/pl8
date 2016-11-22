@@ -8,6 +8,7 @@ The most simple boilerplate generator in the universe.
 - [Installation](#installation)
 - [Demo](#demo)
 - [Example](#example)
+- [Documentation](#documentation)
 
 
 ## About
@@ -33,7 +34,7 @@ Need to create some boilerplates? PL8 makes it easy!
 ## Example
 All paths and files correspond to the `examples/` directory.
 
-###### pl8rc.json config
+#### pl8rc.json config
 ``` js
 {
   title: 'PL8 Config Examples',
@@ -50,7 +51,7 @@ All paths and files correspond to the `examples/` directory.
 }
 ```
 
-###### react-component.json configuration
+#### react-component.json configuration
 ``` js
 {
   title: 'React Component',
@@ -74,3 +75,24 @@ All paths and files correspond to the `examples/` directory.
   }]
 }
 ```
+
+
+## Documentation
+
+#### Title:
+Title of PL8 configuration, acts as the initial prompt header.
+
+#### Directory:
+Output directory for new files.
+
+#### Vars:
+Static variable references to replace in boilerplate templates for new files.
+
+#### Inputs:
+Allow user to input custom variable content for boilerplate templates.
+
+#### Files:
+Files to output from boilerplate templates.
+
+#### Choices:
+Allow users to choose between multiple boilerplate configurations.

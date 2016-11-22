@@ -32,6 +32,13 @@ Need to create some boilerplates? PL8 makes it easy!
 
 
 ## Documentation
+- [Title](#title)
+- [Directory](#directory)
+- [Vars](#vars)
+- [Inputs](#inputs)
+- [Files](#files)
+- [Choices](#choices)
+- [Example Config](#example-config)
 
 #### Title: `String`
 Title of PL8 configuration, acts as the initial prompt header.

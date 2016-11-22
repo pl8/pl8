@@ -7,8 +7,8 @@ The most simple boilerplate generator in the universe.
 - [About](#about)
 - [Installation](#installation)
 - [Demo](#demo)
-- [Example](#example)
 - [Documentation](#documentation)
+- [Example](#example)
 
 
 ## About
@@ -29,27 +29,6 @@ Need to create some boilerplates? PL8 makes it easy!
 
 ## Demo
 ![Preview](http://g.recordit.co/6QeNvdSQWo.gif)
-
-
-## Example
-All paths and files correspond to the `examples/` directory.
-
-#### pl8rc.json config
-``` js
-{
-  title: 'PL8 Config Examples',
-  directory: 'examples/output', // outputs all files to this directory
-  // config path strings or objects are accepted
-  choices: [
-    // config path string examples
-    'examples/configs/react-component.json',
-    'examples/configs/java-class.json',
-    'examples/configs/css-button.json',
-    'examples/configs/angular-component.json',
-    'examples/configs/ruby-controller.json',
-  ]
-}
-```
 
 
 ## Documentation
@@ -147,5 +126,56 @@ Allow users to choose between multiple boilerplate configurations.
     'path/to/config.json',
     'path/to/different/config.json',
   ],
+}
+```
+
+
+## Example
+All paths and files correspond to the `examples/` directory.
+
+#### pl8rc.json config
+``` js
+// Allow user to choose config option
+{
+  title: 'PL8 Boilerplate Example',
+  directory: 'output/files', // outputs all files to this directory
+  choices: [
+    // string example
+    'examples/configs/react-component.json',
+
+    // object example
+    {
+      title: 'Javascript Component',
+      vars: [{
+        ref: 'name', // pl8 variable for replacement ... {pl8.name} = HelloWorld
+        content: 'HelloWorld',
+        // accepts tpl: 'path/to/tpl.ext' ... path to local template
+        // accepts git: 'github.resource.url' ... url to github resource as template
+      }],
+      inputs: [{
+        title: 'What is the component name?', // prompt message to show user
+        ref: 'component', // pl8 variable for replacement ... {pl8.component} = User input value
+      }],
+      files: [{
+        name: 'index.js', // creates index.js file
+        content: 'export default {}'
+      }, {
+        name: '{pl8.name}.js', // pl8 variables will be replaced in all file names and directory paths
+        tpl: 'templates/tpl.js', // accepts local template files
+      }, {
+        name: '{pl8.name}-e2e.js',
+        git: 'https://github.com/pl8/pl8/blob/master/examples/templates/react-e2e.js', // accepts github resource urls for templates
+      }]
+    }
+  ]
+}
+
+// Or create some files right away
+{
+  directory: 'output/files',
+  files: [{
+    name: 'README.md', // creates README.md file
+    content: '# README',
+  }],
 }
 ```
